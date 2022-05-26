@@ -65,6 +65,7 @@ brew install ssh-copy-id
 brew install tree
 
 brew install bitwarden
+brew install syncthing
 brew install docker
 brew install docker-compose
 brew install adobe-creative-cloud
@@ -78,6 +79,7 @@ brew install contexts
 brew install figma
 brew install spectacle
 brew install volta
+
 
 # Install video related tools
 brew install ffmpeg
