@@ -11,6 +11,15 @@ else
     brew update
 fi
 
+brew_install() {
+    echo "\nInstalling $1"
+    if brew list $1 &>/dev/null; then
+        echo "${1} is already installed"
+    else
+        brew install $1 && echo "$1 is installed"
+    fi
+}
+
 # Upgrade any already-installed formulae.
 brew upgrade
 
@@ -19,7 +28,7 @@ BREW_PREFIX=$(brew --prefix)
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew install coreutils
+brew_install coreutils
 ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
 # Install some other useful utilities like `sponge`.

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-./macos.sh
 ./brew.sh
-./volta.sh
 ./bootstrap.fish
+./macos.sh
+./volta.sh
