@@ -1,0 +1,27 @@
+# Compiled Python files
+*.pyc
+
+# dependencies
+/bower_components/
+/node_modules/
+
+# misc
+.env*
+.pnp*
+.sass-cache
+.eslintcache
+connect.lock
+npm-debug.log*
+yarn-error.log
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
