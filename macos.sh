@@ -760,10 +760,14 @@ defaults write com.operasoftware.OperaDeveloper PMPrintingExpandedStateForPrint2
 cp -r settings/spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
 
 ###############################################################################
-# Set wallpaper
+# Set wallpaper and menu bar
 ###############################################################################
 
+# add a black bar to current wallpaper
 mint run igorkulman/ChangeMenuBarColor SolidColor "#000000"
+
+# hide spotlight icon
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -boolean true
 
 ###############################################################################
 # Kill affected applications                                                  #
