@@ -71,6 +71,7 @@ brew_install tree
 brew_install ssh-copy-id
 brew_install wget
 brew_install exa
+brew_install ctop
 echo '------------------------'
 echo 'Development Tools'
 echo '------------------------'
