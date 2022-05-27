@@ -5,7 +5,7 @@ echo 'Install apps and tools using Homebrew and MAS.'
 echo 'Make sure we’re using the latest Homebrew.'
 which -s brew
 if [[ $? != 0 ]] ; then
-    echo 'Install Homebrew'
+    echo 'Homebrew not found! Installing Homebrew.'
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
     brew update
@@ -134,6 +134,12 @@ echo "Install Spark - Email app by readdle"
 mas install 1176895641 
 echo "Install XCode"
 mas install 497799835
+
+echo '------------------------'
+echo 'Install mint (swift packager)'
+echo '------------------------'
+brew_install mint
+
 
 echo '------------------------'
 echo 'Setup services'

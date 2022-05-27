@@ -759,6 +759,11 @@ defaults write com.operasoftware.OperaDeveloper PMPrintingExpandedStateForPrint2
 # Set up my preferred keyboard shortcuts
 cp -r settings/spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
 
+###############################################################################
+# Set wallpaper
+###############################################################################
+
+mint run igorkulman/ChangeMenuBarColor SolidColor "#000000"
 
 ###############################################################################
 # Kill affected applications                                                  #
