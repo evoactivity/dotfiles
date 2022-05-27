@@ -26,7 +26,7 @@ function doIt
 
   cd $HOME
   ln -s "$script_dir"/settings 
-  for file in '.curlrc' '.editorconfig' '.gitconfig' '.gitignore' '.screenrc' '.wgetrc'
+  for file in '.curlrc' '.editorconfig' '.gitconfig' '.gitignore' '.screenrc' '.wgetrc' '.iterm2_shell_integration.fish'
     if test -e ~/$file
       and not test -L ~/$file
       mv ~/"$file" ~/"$file".bak

@@ -70,6 +70,7 @@ brew_install screen
 brew_install tree
 brew_install ssh-copy-id
 brew_install wget
+brew_install exa
 echo '------------------------'
 echo 'Development Tools'
 echo '------------------------'
@@ -97,6 +98,7 @@ echo '------------------------'
 brew_install alfred
 brew_install spectacle
 brew_install contexts
+brew_install dockutil
 echo '------------------------'
 echo 'My Tools'
 echo '------------------------'
@@ -129,6 +131,8 @@ echo '------------------------'
 brew_install mas
 echo "Install Spark - Email app by readdle"
 mas install 1176895641 
+echo "Install XCode"
+mas install 497799835
 
 echo '------------------------'
 echo 'Setup services'
