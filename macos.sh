@@ -760,7 +760,7 @@ defaults write com.operasoftware.OperaDeveloper PMPrintingExpandedStateForPrint2
 cp -r settings/spectacle.json ~/Library/Application\ Support/Spectacle/Shortcuts.json 2> /dev/null
 
 ###############################################################################
-# Set wallpaper and menu bar
+# Set wallpaper and menu bar                                                  #
 ###############################################################################
 
 # add a black bar to current wallpaper
