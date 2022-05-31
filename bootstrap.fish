@@ -2,52 +2,66 @@
 
 set script_dir (realpath (dirname (status -f)))
 
-cd $script_dir;
+cd $script_dir
 
 
 if test -d ".git"
-  git pull origin main;
+    git pull origin main
 end
 
 function read_confirm
-  while true
-    read -l -P 'Any existing files will be renamed to filename.ext.bak. Do you want to continue? [y/N] ' confirm
+    while true
+        read -l -P 'Any existing dotfiles will be renamed to filename.ext.bak. Do you want to continue? [y/N] ' confirm
 
-    switch $confirm
-      case Y y
-        return 0
-      case '' N n
-        return 1
+        switch $confirm
+            case Y y
+                return 0
+            case '' N n
+                return 1
+        end
     end
-  end
 end
 
 function doIt
 
-  cd $HOME
-  ln -s "$script_dir"/settings 
-  for file in '.curlrc' '.editorconfig' '.gitconfig' '.gitignore' '.screenrc' '.wgetrc' '.iterm2_shell_integration.fish'
-    if test -e ~/$file
-      and not test -L ~/$file
-      mv ~/"$file" ~/"$file".bak
-    end
+    cd $HOME
 
-    if not test -e ~/$file
-      and not test -L ~/$file
-      echo "Symlinking $file"
-      ln -s "$script_dir/$file"
-     else
-      echo "$file already symlinked"
+    for file in .curlrc \
+        .editorconfig \
+        .gitconfig \
+        .gitignore \
+        .screenrc \
+        .wgetrc \
+        settings \
+        .config/fish/completions \
+        .config/fish/conf.d \
+        .config/fish/functions \
+        .config/fish/aliases.fish \
+        .config/fish/config.fish \
+        .config/fish/.iterm2_shell_integration.fish
+
+        echo ''
+        echo ''
+        echo "------------------ $file ------------------"
+
+        if test -e ~/$file
+            if not test -L ~/$file
+                echo "Not a symlink, will backup $file"
+                mv ~/"$file" ~/"$file".bak
+            end
+        end
+
+        echo "Symlinking $file"
+        ln -s -f -h "$script_dir/$file" ~/$file
+
     end
-  end
 end
 
-argparse 'f/force' -- $argv
+argparse f/force -- $argv
 if set --query _flag_f
-	doIt;
+    doIt
 else
-	if read_confirm
-		doIt;
-	end
+    if read_confirm
+        doIt
+    end
 end
-

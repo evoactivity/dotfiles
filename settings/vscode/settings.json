@@ -1,53 +1,81 @@
 {
-	"editor.fontFamily": "MesloLGS Nerd Font Mono, Monaco, 'Courier New', monospace",
-	"git.confirmSync": false,
-	"git.autofetch": true,
-	"git.enableSmartCommit": true,
-	
-	// Belafonte Night
-	// "workbench.colorCustomizations": {
-	//     "panel.background": "#20111b",
-	//     "terminal.foreground": "#968c83",
-	//     "terminal.ansiBlack": "#20111b",
-	//     "terminal.ansiBlue": "#426a79",
-	//     "terminal.ansiCyan": "#989a9c",
-	//     "terminal.ansiGreen": "#858162",
-	//     "terminal.ansiMagenta": "#97522c",
-	//     "terminal.ansiRed": "#be100e",
-	//     "terminal.ansiWhite": "#968c83",
-	//     "terminal.ansiYellow": "#eaa549",
-	//     "terminal.ansiBrightBlack": "#5e5252",
-	//     "terminal.ansiBrightBlue": "#426a79",
-	//     "terminal.ansiBrightCyan": "#989a9c",
-	//     "terminal.ansiBrightGreen": "#858162",
-	//     "terminal.ansiBrightMagenta": "#97522c",
-	//     "terminal.ansiBrightRed": "#be100e",
-	//     "terminal.ansiBrightWhite": "#d5ccba",
-	//     "terminal.ansiBrightYellow": "#eaa549",
-	//     "terminal.selectionBackground": "#45373c",
-	//     "terminalCursor.foreground": "#968c83"
-	// },
-	
-	// Github Dark Customised
-	"workbench.colorCustomizations": {
-		"terminal.ansiBlack": "#1c2128",
-		"terminal.ansiBlue": "#539bf5",
-		"terminal.ansiBrightBlack": "#636e7b",
-		"terminal.ansiBrightBlue": "#6cb6ff",
-		"terminal.ansiBrightCyan": "#56d4dd",
-		"terminal.ansiBrightGreen": "#6bc46d",
-		"terminal.ansiBrightMagenta": "#dcbdfb",
-		"terminal.ansiBrightRed": "#ff938a",
-		"terminal.ansiBrightWhite": "#cdd9e5",
-		"terminal.ansiBrightYellow": "#daaa3f",
-		"terminal.ansiCyan": "#39c5cf",
-		"terminal.ansiGreen": "#57ab5a",
-		"terminal.ansiMagenta": "#b083f0",
-		"terminal.ansiRed": "#f47067",
-		"terminal.ansiWhite": "#909dab",
-		"terminal.ansiYellow": "#c69026",
-		"terminal.foreground": "#768390",
-	},
-	"workbench.iconTheme": "vscode-icons",
-	"workbench.colorTheme": "GitHub Dark"
+  "editor.fontFamily": "MesloLGS Nerd Font Mono, Monaco, 'Courier New', monospace",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+
+  // Belafonte Night
+  "workbench.colorCustomizations": {
+    "panel.background": "#20111b",
+    "terminal.foreground": "#968c83",
+    "terminal.ansiBlack": "#20111b",
+    "terminal.ansiBlue": "#426a79",
+    "terminal.ansiCyan": "#989a9c",
+    "terminal.ansiGreen": "#858162",
+    "terminal.ansiMagenta": "#97522c",
+    "terminal.ansiRed": "#be100e",
+    "terminal.ansiWhite": "#968c83",
+    "terminal.ansiYellow": "#eaa549",
+    "terminal.ansiBrightBlack": "#5e5252",
+    "terminal.ansiBrightBlue": "#426a79",
+    "terminal.ansiBrightCyan": "#989a9c",
+    "terminal.ansiBrightGreen": "#858162",
+    "terminal.ansiBrightMagenta": "#97522c",
+    "terminal.ansiBrightRed": "#be100e",
+    "terminal.ansiBrightWhite": "#d5ccba",
+    "terminal.ansiBrightYellow": "#eaa549",
+    "terminal.selectionBackground": "#45373c",
+    "terminalCursor.foreground": "#968c83"
+  },
+
+  // Github Dark Customised
+  // "workbench.colorCustomizations": {
+  //   "terminal.ansiBlack": "#1c2128",
+  //   "terminal.ansiBlue": "#539bf5",
+  //   "terminal.ansiBrightBlack": "#636e7b",
+  //   "terminal.ansiBrightBlue": "#6cb6ff",
+  //   "terminal.ansiBrightCyan": "#56d4dd",
+  //   "terminal.ansiBrightGreen": "#6bc46d",
+  //   "terminal.ansiBrightMagenta": "#dcbdfb",
+  //   "terminal.ansiBrightRed": "#ff938a",
+  //   "terminal.ansiBrightWhite": "#cdd9e5",
+  //   "terminal.ansiBrightYellow": "#daaa3f",
+  //   "terminal.ansiCyan": "#39c5cf",
+  //   "terminal.ansiGreen": "#57ab5a",
+  //   "terminal.ansiMagenta": "#b083f0",
+  //   "terminal.ansiRed": "#f47067",
+  //   "terminal.ansiWhite": "#909dab",
+  //   "terminal.ansiYellow": "#c69026",
+  //   "terminal.foreground": "#768390"
+  // },
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "GitHub Dark",
+  "l13Projects.autoRemoveDeletedProjects": true,
+  "l13Projects.groupDescriptionFormat": "workspaces",
+  "l13Projects.initialFavoriteGroupsState": "collapsed",
+  "l13Projects.vsCode.folders": ["/Users/liam/Work"],
+  "l13Projects.useCacheForDetectedProjects": true,
+  "l13Projects.workspace.folders": ["/Users/liam/Work"],
+  "l13Projects.vsCode.maxDepthRecursion": 0,
+  "l13Projects.workspace.maxDepthRecursion": 0,
+  "l13Projects.git.maxDepthRecursion": 3,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[handlebars]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.insertFinalNewline": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.debug": true,
+  "eslint.alwaysShowStatus": true,
+  "workbench.startupEditor": "none",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.tsserver.log": "verbose"
 }

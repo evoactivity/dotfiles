@@ -57,6 +57,7 @@ echo 'Install GnuPG to enable PGP-signing commits.'
 echo '------------------------'
 brew_install gnupg
 brew_install gpg-suite
+
 echo '------------------------'
 echo 'Install some CLI apps'
 echo '------------------------'
@@ -72,6 +73,8 @@ brew_install ssh-copy-id
 brew_install wget
 brew_install exa
 brew_install ctop
+brew_install hyperfine
+
 echo '------------------------'
 echo 'Development Tools'
 echo '------------------------'
@@ -131,7 +134,7 @@ echo 'Install Mac App Store CLI tool and related apps'
 echo '------------------------'
 brew_install mas
 echo "Install Spark - Email app by readdle"
-mas install 1176895641 
+mas install 1176895641
 echo "Install XCode"
 mas install 497799835
 
@@ -139,7 +142,6 @@ echo '------------------------'
 echo 'Install mint (swift packager)'
 echo '------------------------'
 brew_install mint
-
 
 echo '------------------------'
 echo 'Setup services'

@@ -6,6 +6,7 @@ continuation_prompt = "▶▶"
 # Order of modules on prompt
 format = """$cmd_duration\
         $line_break\
+        $custom\
         $username\
         $hostname\
         $directory\
@@ -18,11 +19,9 @@ format = """$cmd_duration\
         $character\
     """
 
-right_format = """        $docker_context\
+right_format = """$docker_context\
         (↓ Toolchain version modules ↓)\
         $dart\
-        $elixir\
-        $elm\
         $golang\
         $java\
         $nodejs\
@@ -30,23 +29,16 @@ right_format = """        $docker_context\
         $python\
         $rust\
         $swift\
-        $zig\
         (↑ Toolchain version modules ↑)\
         (↓ Package modules ↓)\
-        $helm\
         $package\
-        $cmake\
-        $conda\
         (↑ Package modules ↑)\
-        $nix_shell\
         $env_var\
-        $custom\
         $time\
         (↑ above input line ↑)\
         $line_break\
         (↓ on input line ↓)\
         $battery\
-        $shlvl\
         $jobs\
         $status\
         """
@@ -76,33 +68,11 @@ style = "bold bg:#ab1515 fg:#ffffff"
 threshold = 20
 style = "bg:#ab1515 fg:#ffffff"
 
-
-[cmake]
-# disabled = true
-# symbol = "卑" # alternate
-symbol = "喝"
-style = "bg:#57686B fg:#EEEEEE"
-format = "[[](bg:#57686B fg:black) $symbol$version[](bg:black fg:#57686B)]($style)"
-
 [cmd_duration]
 # disabled = true
 format = """took [$duration]($style)
 
 """
-
-[conda]
-# disabled = true
-symbol = " "
-style = "bg:#a4b595 fg:#111111"
-ignore_base = true
-truncation_length = 1
-format = "[[](bg:#a4b595 fg:black) $symbol$environment[](bg:black fg:#a4b595)]($style)"
-
-[crystal]
-# disabled = true
-symbol = " "
-style = "bg:#EEEEEE fg:#111111"
-format = "[[](bg:#EEEEEE fg:black) $symbol$version[](bg:black fg:#EEEEEE)]($style)"
 
 [dart]
 # disabled = true
@@ -114,12 +84,12 @@ format = "[[](bg:#32BBF9 fg:black) $symbol$version[](bg:black fg:#32BBF9)]
 [directory]
 style = "italic bg:#545B68 fg:#EEEEEE"
 read_only = "  "
-read_only_style = "bold bg:#ff0000 fg:#ffffff"
+read_only_style = "bold bg:red fg:#ffffff"
 # truncation_length = 3
 truncate_to_repo = true
 # truncation_symbol = "…"
 # fish_style_pwd_dir_length = 3
-format = "([[](bg:#ff0000 fg:black)$read_only[](bg:black fg:#ff0000)]($read_only_style))[[](bg:#545B68 fg:black) $path [](bg:black fg:#545B68)]($style)"
+format = "([[](bg:red fg:black)$read_only[](bg:black fg:red)]($read_only_style))[[](bg:#545B68 fg:black) $path [](bg:black fg:#545B68)]($style)"
 
 [directory.substitutions]
 "~/Documents" = ""
@@ -137,26 +107,6 @@ style = "bg:#3A91DC  fg:#EEEEEE"
 only_with_files = true
 format = "[[](bg:#3A91DC fg:black) $symbol$context [](bg:black fg:#3A91DC)]($style)"
 
-[dotnet]
-# disabled = true
-symbol = " "
-style = "bg:#4A35CC fg:#EEEEEE"
-heuristic = true
-format = "[[](bg:#4A35CC fg:black) $symbol$version( 什$tfm) [](bg:black fg:#4A35CC)]($style)"
-
-[elixir]
-# disabled = true
-symbol = " "
-style = "bg:#4E2A8E fg:#EEEEEE"
-format = '[[](bg:#4E2A8E fg:black) $symbol$version \(OTP:$otp_version\) [](bg:black fg:#4E2A8E)]($style)'
-
-[elm]
-# disabled = true
-symbol = " " # original
-# symbol = " " # clearer
-style = "bg:#3E92D2 fg:#EEEEEE"
-format = "[[](bg:#3E92D2 fg:black) $symbol$version [](bg:black fg:#3E92D2)]($style)"
-
 [env_var]
 disabled = true
 symbol = " "
@@ -164,18 +114,6 @@ style = "bg:#545B68 fg:#EEEEEE"
 variable = "0"
 default = "fish"
 format = "([[](bg:#545B68 fg:black) $symbol$env_value [](bg:black fg:#545B68)]($style))"
-
-[erlang]
-# disabled = true
-symbol = " "
-style = "bg:#8C032F fg:#EEEEEE"
-format = "[[](bg:#8C032F fg:black) $symbol$version [](bg:black fg:#8C032F)]($style)"
-
-[gcloud]
-# disabled = true
-symbol = "☁️ "
-style = "bg:#1A73E8 fg:#EEEEEE"
-format = '[[](bg:#1A73E8 fg:black) $symbol$account(\($region\)) [](bg:black fg:#1A73E8)]($style)'
 
 [git_branch]
 # disabled = true
@@ -226,16 +164,9 @@ symbol = " "
 style = "bg:#7FD5EA fg:#111111"
 format = "[[](bg:#7FD5EA fg:black) $symbol$version [](bg:black fg:#7FD5EA)]($style)"
 
-[helm]
-# disabled = true
-symbol = "ﴱ "
-style = "bg:#0F1689 fg:#EEEEEE"
-format = "[[](bg:#0F1689 fg:black) $symbol$version [](bg:black fg:#0F1689)]($style)"
-
 [hostname]
 # disabled = true
 style = "bg:#57686B fg:#111111"
-# ssh_only = false
 trim_at = "."
 format = "[[](bg:#57686B fg:black)($style)$hostname [](bg:black fg:#222A36)]($style)"
 
@@ -259,37 +190,17 @@ style = "bg:#3371E3 fg:#EEEEEE"
 format = '[[](bg:#3371E3 fg:black) $symbol$context (\($namespace\))[](bg:black fg:#3371E3)]($style)'
 
 [memory_usage]
- disabled = false
+disabled = false
 symbol = " "
 style = "bg:#BBBBBB fg:#111111"
 threshold = -1
 format = "([[](bg:#BBBBBB fg:black) $symbol$ram (:$swap)[](bg:black fg:#BBBBBB)]($style))"
-
-[nim]
-# disabled = true
-symbol = " "
-style = "bg:#FFE953 fg:#111111"
-format = "[[](bg:#FFE953 fg:black) $symbol$version [](bg:black fg:#FFE953)]($style)"
-
-[nix_shell]
-# disabled = true
-symbol = " "
-style = "bg:#27385D fg:#EEEEEE"
-impure_msg = '[\(impure\)](bg:#27385D fg:#DE935F)'
-pure_msg = '[\(pure\)](bg:#27385D fg:#57686B)'
-format = '[[](bg:#27385D fg:black) $symbol$name$state [](bg:black fg:#27385D)]($style)'
 
 [nodejs]
 # disabled = true
 symbol = " "
 style = "bg:#005F00 fg:#EEEEEE"
 format = "[[](bg:black fg:#005F00) $symbol$version [](bg:#005F00 fg:black)]($style)"
-
-[ocaml]
-# disabled = true
-symbol = "🐫 "
-style = "bg:#F48B32 fg:#111111"
-format = "[[](bg:#F48B32 fg:black) $symbol$version [](bg:black fg:#F48B32)]($style)"
 
 [package]
 # disabled = true
@@ -298,23 +209,11 @@ style = "bg:#545B68 fg:#EEEEEE"
 display_private = false
 format = "[[](bg:#545B68 fg:black) $symbol$version [](bg:black fg:#545B68)]($style)"
 
-[perl]
-# disabled = true
-symbol = "🐪 "
-style = "bg:#0073A1 fg:#EEEEEE"
-format = "[[](bg:#0073A1 fg:black) $symbol$version [](bg:black fg:#0073A1)]($style)"
-
 [php]
 # disabled = true
 symbol = " "
 style = "bg:#8892BF fg:#EEEEEE"
 format = "[[](bg:#8892BF fg:black) $symbol$version [](bg:black fg:#8892BF)]($style)"
-
-[purescript]
-# disabled = true
-symbol = "<=>"
-style = "bg:#1D222D fg:#EEEEEE"
-format = "[[](bg:#1D222D fg:black) $symbol$version [](bg:black fg:#1D222D)]($style)"
 
 [python]
 # disabled = true
@@ -338,19 +237,6 @@ symbol = " "
 # symbol = " " # alternate
 style = "bg:#A72145 fg:#EEEEEE"
 format = "[[](bg:#A72145 fg:black) $symbol$version [](bg:black fg:#A72145)]($style)"
-
-[shlvl]
-# disabled = false
-symbol = ""
-style = "bold bg:black fg:#d7bd8d"
-threshold = 2
-format = "[ $symbol$shlvl]($style)"
-
-[singularity]
-# disabled = true
-symbol = "S"
-style = "bg:#1D315F fg:#EEEEEE"
-format = '[[](bg:#1D315F fg:black) $symbol\[$env\] [](bg:black fg:#1D315F)]($style)'
 
 [swift]
 # disabled = true
@@ -376,17 +262,16 @@ format = "[[](bg:black fg:#f56942)  $time [](bg:#f56942 fg:black)]($sty
 
 [username]
 # disabled = true
-show_always = true
-style_root = "bold bg:#728da8 fg:#DE935F"
+# show_always = true
+style_root = "bold bg:red fg:#DE935F"
 style_user = "bg:#728da8 fg:#222A36"
-format = "[[](bg:#728da8 fg:#728da8)\\$ $user [](bg:black fg:#728da8)]($style)"
+format = "[ \\$ $user [](bg:black fg:red)]($style)"
 
-[zig]
-# disabled = true
-symbol = "［Z］"
-# symbol = "↯ " # alternate
-style = "bg:#F7A41D fg:#EEEEEE"
-format = "[[](bg:#F7A41D fg:black) $symbol$version [](bg:black fg:#F7A41D)]($style)"
-#EOF.m
-
+# Show the local git username if git dir has it set locally
+# Show the logged in user if not root
+[custom.git_name]
+command = 'git config --local user.name || echo $USER'
+when = "test $USER != 'root'"
+format = "[ \\$ $output [](bg:black fg:#728da8)]($style)"
+style = "bg:#728da8 fg:#222A36"
 
