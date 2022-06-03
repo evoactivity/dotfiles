@@ -84,6 +84,10 @@ brew_install docker-compose
 brew_install volta
 brew_install git
 brew_install git-lfs
+brew_install cyberduck
+brew_install linear-linear
+brew_install beekeeper-studio
+
 echo '------------------------'
 echo 'compression'
 echo '------------------------'
@@ -91,11 +95,15 @@ brew_install p7zip
 brew_install pigz
 brew_install zopfli
 brew_install keka
+
 echo '------------------------'
 echo 'Browsers'
 echo '------------------------'
 brew_install firefox
 brew_install google-chrome
+brew_install defaultbrowser
+osascript ./default-browser.scpt "firefox"
+
 echo '------------------------'
 echo 'Mac Apps'
 echo '------------------------'
@@ -103,6 +111,7 @@ brew_install alfred
 brew_install spectacle
 brew_install contexts
 brew_install dockutil
+
 echo '------------------------'
 echo 'My Tools'
 echo '------------------------'
@@ -112,6 +121,7 @@ brew_install syncthing
 brew_install fantastical
 brew_install adobe-creative-cloud
 brew_install figma
+
 echo '------------------------'
 echo 'Install video and image related tools'
 echo '------------------------'
@@ -121,6 +131,8 @@ brew_install kap
 brew_install vlc
 brew_install mpv
 brew_install vips
+brew_install plex-media-player
+
 echo '------------------------'
 echo 'Install messaging apps'
 echo '------------------------'
