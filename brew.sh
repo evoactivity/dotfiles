@@ -131,7 +131,7 @@ brew_install kap
 brew_install vlc
 brew_install mpv
 brew_install vips
-brew_install plex-media-player
+brew_install plex
 
 echo '------------------------'
 echo 'Install messaging apps'
