@@ -26,10 +26,10 @@ if not test -e ~/.config/starship.toml
 end
 
 
-if not test -e ~/.config/fish/secrets.fish
+if not test -e ~/.config/fish/.secrets.fish
     echo "#!/usr/bin/env fish
 
 # This file is not a symlink and not part of the dotfiles repo, do not commit anywhere!
 
-" >~/.config/fish/secrets.fish
+" >~/.config/fish/.secrets.fish
 end

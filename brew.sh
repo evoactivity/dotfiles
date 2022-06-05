@@ -82,6 +82,10 @@ brew_install visual-studio-code
 brew_install docker
 brew_install docker-compose
 brew_install volta
+brew_install pyenv
+brew_install pipx
+pipx ensurepath
+pipx install dooti # needed to set some mac defaults
 brew_install git
 brew_install git-lfs
 brew_install cyberduck
@@ -102,7 +106,6 @@ echo '------------------------'
 brew_install firefox
 brew_install google-chrome
 brew_install defaultbrowser
-osascript ./default-browser.scpt "firefox"
 
 echo '------------------------'
 echo 'Mac Apps'

@@ -4,7 +4,8 @@
 
 ./brew.sh
 ./bootstrap.fish
-./macos.fish
-./dock.fish
 ./setup-fish.fish
+./python-dev.fish
+./macos-defaults.fish
+./dock.fish
 ./volta.fish

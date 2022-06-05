@@ -502,6 +502,14 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 ###############################################################################
+# Default Browser and Mail                                                    #
+###############################################################################
+dooti scheme mailto Spark
+dooti scheme http Firefox
+dooti scheme https Firefox
+dooti ext html Firefox
+
+###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
 
