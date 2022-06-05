@@ -105,7 +105,6 @@ echo 'Browsers'
 echo '------------------------'
 brew_install firefox
 brew_install google-chrome
-brew_install defaultbrowser
 
 echo '------------------------'
 echo 'Mac Apps'
