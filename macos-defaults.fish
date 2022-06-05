@@ -504,10 +504,9 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 ###############################################################################
 # Default Browser and Mail                                                    #
 ###############################################################################
+# Default Browser script wrap dooti so apple script can click OK on the confirmation window
+osascript ./default-browser.scpt Firefox
 dooti scheme mailto Spark
-dooti scheme http Firefox
-dooti scheme https Firefox
-dooti ext html Firefox
 
 ###############################################################################
 # Spotlight                                                                   #
