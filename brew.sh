@@ -108,7 +108,7 @@ echo '------------------------'
 echo 'Mac Apps'
 echo '------------------------'
 brew_install alfred
-brew_install spectacle
+brew_install rectangle
 brew_install contexts
 brew_install dockutil
 
