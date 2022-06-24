@@ -36,7 +36,7 @@ function doIt
         .config/fish/completions \
         .config/fish/conf.d \
         .config/fish/functions \
-        .config/fish/aliases.fish \
+        .config/fish/.aliases.fish \
         .config/fish/config.fish \
         .config/fish/.iterm2_shell_integration.fish
 
