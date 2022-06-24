@@ -80,5 +80,13 @@
   "eslint.debug": true,
   "eslint.alwaysShowStatus": true,
   "workbench.startupEditor": "none",
-  "typescript.tsserver.log": "verbose"
+  "typescript.tsserver.log": "verbose",
+  "html.format.templating": true,
+  "editor.linkedEditing": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
