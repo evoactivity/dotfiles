@@ -123,6 +123,7 @@ brew_install syncthing
 brew_install fantastical
 brew_install adobe-creative-cloud
 brew_install figma
+brew_install rclone
 
 echo '------------------------'
 echo 'Install video and image related tools'
