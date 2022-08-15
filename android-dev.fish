@@ -1,13 +1,15 @@
 #!/usr/bin/env fish
 
 # Install Jabba
-
+echo -------------------------------------
+echo 'Enable Jabba - Java Version Manager'
+echo -------------------------------------
 function brew_install
-    if brew list $1 &>/dev/null
-        echo "$1 is already installed"
+    if brew list $argv &>/dev/null
+        echo "$argv is already installed"
     else
-        echo "Installing $1"
-        brew install $1 && echo "$1 is installed"
+        echo "Installing $argv"
+        brew install $argv && echo "$argv is installed"
     end
     echo ''
 end
@@ -17,9 +19,11 @@ if not test -e ~/.jabba/jabba.fish
     curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash; and . ~/.jabba/jabba.fish
 end
 
+echo -------------------------------------
+echo 'Enable openjdk@1.16.0'
+echo -------------------------------------
 jabba install openjdk@1.16.0
 jabba use openjdk@1.16.0
-
 
 echo ------------------------
 echo 'Android Dev Tools'
@@ -30,4 +34,3 @@ brew_install maven
 brew_install gradle
 brew_install android-sdk
 brew_install android-ndk
-android update sdk --no-ui

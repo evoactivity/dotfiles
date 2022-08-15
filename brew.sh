@@ -91,6 +91,8 @@ brew_install git-lfs
 brew_install cyberduck
 brew_install linear-linear
 brew_install beekeeper-studio
+brew_install watchman
+brew_install ios-deploy
 
 echo '------------------------'
 echo 'compression'
@@ -124,6 +126,7 @@ brew_install fantastical
 brew_install adobe-creative-cloud
 brew_install figma
 brew_install rclone
+brew_install insomnia
 
 echo '------------------------'
 echo 'Install video and image related tools'
