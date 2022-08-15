@@ -11,7 +11,8 @@ set -e _VOLTA_TOOL_RECURSION
 set -gx PIPX_DEFAULT_PYTHON "$HOME/.pyenv/versions/3.10.4/bin/python"
 set -gx PATH $PATH /Users/liam/.local/bin #pipx location
 
-set -gx ANDROID_NDK_HOME="/opt/homebrew/share/android-ndk"
+set -gx ANDROID_HOME /Users/liam/Library/Android/sdk
+set -gx PATH "$ANDROID_HOME/platform-tools" $PATH
 
 test -e ~/.config/fish/.iterm2_shell_integration.fish; and source ~/.config/fish/.iterm2_shell_integration.fish
 
