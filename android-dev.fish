@@ -34,3 +34,4 @@ brew_install maven
 brew_install gradle
 brew_install android-sdk
 brew_install android-ndk
+brew_install apktool

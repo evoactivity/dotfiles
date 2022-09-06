@@ -120,7 +120,7 @@ echo '------------------------'
 echo 'My Tools'
 echo '------------------------'
 brew_install private-internet-access
-brew_install bitwarden
+# brew_install bitwarden // we use the mac app store version for browser integration
 brew_install syncthing
 brew_install fantastical
 brew_install adobe-creative-cloud
@@ -155,6 +155,8 @@ echo "Install Spark - Email app by readdle"
 mas install 1176895641
 echo "Install XCode"
 mas install 497799835
+echo "Install Bitwarden"
+mas install 1352778147
 
 echo '------------------------'
 echo 'Install mint (swift packager)'

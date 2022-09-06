@@ -92,6 +92,7 @@
   "cSpell.userWords": [
     "adonisjs",
     "fastify",
+    "fullscreen",
     "japa",
     "luxon",
     "Millis",
@@ -109,5 +110,11 @@
     "undelete",
     "undeleted",
     "youch"
-  ]
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  }
 }
