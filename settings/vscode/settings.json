@@ -79,7 +79,6 @@
   "files.insertFinalNewline": true,
   "eslint.debug": true,
   "eslint.alwaysShowStatus": true,
-  "workbench.startupEditor": "none",
   "typescript.tsserver.log": "verbose",
   "html.format.templating": true,
   "editor.linkedEditing": true,
@@ -91,6 +90,9 @@
   },
   "cSpell.userWords": [
     "adonisjs",
+    "birthdate",
+    "cacheable",
+    "DATETIME",
     "fastify",
     "fullscreen",
     "japa",
@@ -101,14 +103,17 @@
     "personalised",
     "pino",
     "rocketseat",
+    "scroller",
     "sendgrid",
     "setex",
     "sharetribe",
     "Signalise",
     "tauri",
     "unaccept",
+    "unauthorised",
     "undelete",
     "undeleted",
+    "unfocusable",
     "youch"
   ],
   "[typescriptreact]": {
@@ -116,5 +121,11 @@
   },
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
-  }
+  },
+  "gitlens.defaultDateLocale": "system",
+  "workbench.productIconTheme": "material-product-icons",
+  "[edge]": {
+    "editor.defaultFormatter": "jripouteau.adonis-vscode-extension"
+  },
+  "svg.preview.mode": "svg"
 }

@@ -93,6 +93,7 @@ brew_install linear-linear
 brew_install beekeeper-studio
 brew_install watchman
 brew_install ios-deploy
+brew_install stripe/stripe-cli/stripe
 
 echo '------------------------'
 echo 'compression'
@@ -127,6 +128,7 @@ brew_install adobe-creative-cloud
 brew_install figma
 brew_install rclone
 brew_install insomnia
+brew_install noun-project
 
 echo '------------------------'
 echo 'Install video and image related tools'
