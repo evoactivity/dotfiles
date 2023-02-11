@@ -13,6 +13,7 @@ set -gx PATH $PATH /Users/liam/.local/bin #pipx location
 
 set -gx ANDROID_HOME /Users/liam/Library/Android/sdk
 set -gx PATH "$ANDROID_HOME/platform-tools" $PATH
+set -gx ANDROID_NDK "/Users/liam/Library/Android/ndk/25.0.8775105"
 
 test -e ~/.config/fish/.iterm2_shell_integration.fish; and source ~/.config/fish/.iterm2_shell_integration.fish
 

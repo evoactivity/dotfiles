@@ -4,6 +4,14 @@
   "git.autofetch": true,
   "git.enableSmartCommit": true,
 
+  "editor.codeActionsOnSave": {
+    "source.removeUnusedImports": true
+  },
+
+  "custom-language-properties": {
+    "css.comments.lineComment": "//"
+  },
+
   // Belafonte Night
   "workbench.colorCustomizations": {
     "panel.background": "#20111b",
@@ -76,44 +84,81 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "files.insertFinalNewline": true,
-  "eslint.debug": true,
-  "eslint.alwaysShowStatus": true,
-  "typescript.tsserver.log": "verbose",
-  "html.format.templating": true,
-  "editor.linkedEditing": true,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "files.insertFinalNewline": true,
+  "eslint.debug": true,
+  "eslint.alwaysShowStatus": true,
+  "typescript.tsserver.log": "verbose",
+  "html.format.templating": true,
+  "editor.linkedEditing": true,
+  "cSpell.language": "en-GB",
   "cSpell.userWords": [
     "adonisjs",
+    "Authorizable",
+    "Autolinker",
+    "autop",
+    "autoresize",
+    "autoswagger",
+    "BACKOFFICE",
     "birthdate",
     "cacheable",
+    "colour",
+    "colours",
+    "customise",
     "DATETIME",
+    "decamelize",
     "fastify",
+    "finalise",
+    "flatpickr",
     "fullscreen",
+    "ical",
     "japa",
+    "japi",
+    "JSONAPI",
+    "lintrc",
     "luxon",
+    "Mezielabs",
     "Millis",
     "mjml",
+    "Normalised",
     "organisation",
+    "passcode",
     "personalised",
     "pino",
+    "Podfile",
+    "podspec",
+    "podspecs",
+    "rebuffer",
+    "rebuffering",
+    "relators",
     "rocketseat",
     "scroller",
     "sendgrid",
     "setex",
     "sharetribe",
     "Signalise",
+    "skippable",
+    "subpodspecs",
+    "summarizing",
     "tauri",
+    "testem",
+    "titleize",
+    "trivago",
     "unaccept",
     "unauthorised",
     "undelete",
     "undeleted",
     "unfocusable",
+    "Uppy",
+    "vars",
+    "verful",
+    "vrbo",
+    "yoctodelay",
     "youch"
   ],
   "[typescriptreact]": {
@@ -127,5 +172,10 @@
   "[edge]": {
     "editor.defaultFormatter": "jripouteau.adonis-vscode-extension"
   },
-  "svg.preview.mode": "svg"
+  "svg.preview.mode": "svg",
+  "git.allowForcePush": true,
+  "gitlens.graph.statusBar.enabled": false,
+  "terminal.integrated.persistentSessionScrollback": 1000,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "eslint.codeActionsOnSave.rules": null
 }

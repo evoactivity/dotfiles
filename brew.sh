@@ -116,6 +116,7 @@ brew_install alfred
 brew_install rectangle
 brew_install contexts
 brew_install dockutil
+brew_install eqmac
 
 echo '------------------------'
 echo 'My Tools'
@@ -129,9 +130,12 @@ brew_install figma
 brew_install rclone
 brew_install insomnia
 brew_install noun-project
+brew_install libreoffice
+brew_install doctl
+
 
 echo '------------------------'
-echo 'Install video and image related tools'
+echo 'Install media related tools'
 echo '------------------------'
 brew_install imagemagick
 brew_install ffmpeg
@@ -140,6 +144,7 @@ brew_install vlc
 brew_install mpv
 brew_install vips
 brew_install plex
+brew_install plexamp
 
 echo '------------------------'
 echo 'Install messaging apps'
