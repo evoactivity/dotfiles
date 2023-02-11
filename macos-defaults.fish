@@ -237,7 +237,7 @@ defaults write com.apple.screencapture location -string "$HOME/Desktop"
 defaults write com.apple.screencapture type -string png
 
 # Disable shadow in screenshots
-defaults write com.apple.screencapture disable-shadow -bool true
+defaults write com.apple.screencapture disable-shadow -bool false
 
 # Enable subpixel font rendering on non-Apple LCDs
 # Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
