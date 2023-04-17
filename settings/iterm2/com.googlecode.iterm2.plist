@@ -433,7 +433,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>8.0189494680851059</real>
+			<real>9.2080867686170205</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -824,6 +824,8 @@
 			<true/>
 			<key>Normal Font</key>
 			<string>MesloLGSNerdFontCompleteM-Regular 14</string>
+			<key>Only The Default BG Color Uses Transparency</key>
+			<true/>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -869,7 +871,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.023736702127659576</real>
+			<real>0.082704454787234039</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>

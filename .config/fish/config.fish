@@ -26,3 +26,8 @@ starship init fish | source
 pyenv init - | source
 
 [ -s "/Users/liam/.jabba/jabba.fish" ]; and source "/Users/liam/.jabba/jabba.fish"
+
+# pnpm
+set -gx PNPM_HOME "/Users/liam/Library/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end
